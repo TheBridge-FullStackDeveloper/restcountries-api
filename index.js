@@ -8,15 +8,16 @@ const cardTemplate = function (/* You can pass the data here*/) {
 const countriesNode = document.getElementById("countries");
 
 fetch(/* Need the provide API URL to get all countries */)
-  .then(function (res) {
-    res.json();
+  .then(function (response) {
+    // fetch() returns a promise containing the response (a Response object).
+    // This is just an HTTP response, not the actual JSON. 
+    // To extract the JSON body content from the response, 
+    // we use the json() method and pass it into the next .then()
   })
   .then(function (countries) {
-    /* Here is where you'll need to 
-       add into the DOM all the countries 
-       received from API */
+    // Here is where you'll need to add into the DOM all the countries received from API 
 
     // 1 - We will need to iterate the countries variable with a loop
-    // 2 - You can use the cardTemplate() function to create div card already styled
-    // 💡 you can use countriesNode to add elements
+    // 2 - You can use the cardTemplate() function to create a div with a class card already styled
+    // 💡 you can use countriesNode variable to add elements
   });

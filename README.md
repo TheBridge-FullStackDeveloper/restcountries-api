@@ -20,4 +20,4 @@ In `index.js` there is a function called `cardTemplate(data)` who receive one pa
 
 ## Bonus 🎁
 
-4 - Create a filter to let the user select just countries in the same continent
+4 - Create a filter to let the user select just countries in the same continent, for this iteration there aren't elements or part of code already done, everything is up to you 😜
