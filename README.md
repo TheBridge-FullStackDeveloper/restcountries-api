@@ -1,4 +1,4 @@
-# World countries 🌎
+# Countries of the World 🌎
 
 In this challenge we are going to use the [restcountries API](https://restcountries.eu/)
 
