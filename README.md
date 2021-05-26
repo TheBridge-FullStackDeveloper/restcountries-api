@@ -18,6 +18,10 @@ In `index.js` there is a function called `cardTemplate(data)` who receive one pa
 
 3 - Add each Country into the DOM using the `cardTemplate()`
 
+The final result should be something like this:
+
+<img width="1440" alt="Screenshot 2021-05-26 at 11 27 13" src="https://user-images.githubusercontent.com/33903092/119640675-23433900-be19-11eb-9eb7-095046759d34.png">
+
 ## Bonus 🎁
 
 4 - Create a filter to let the user select just countries in the same continent, for this iteration there aren't elements or part of code already done, everything is up to you 😜
