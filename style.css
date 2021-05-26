@@ -1,0 +1,22 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+#countries {
+  margin: 55px;
+}
+
+.center {
+  text-align: center;
+}
+
+.card {
+  width: 200px;
+  box-shadow: 15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+  border-radius: 16px;
+}
+
+#flag-image {
+  width: 100%;
+  border-radius: 16px;
+}
