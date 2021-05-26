@@ -3,7 +3,10 @@ body {
 }
 
 #countries {
+  display: flex;
+  flex-wrap: wrap;
   margin: 55px;
+  justify-content: center;
 }
 
 .center {
@@ -14,9 +17,11 @@ body {
   width: 200px;
   box-shadow: 15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
   border-radius: 16px;
+  margin: 20px;
 }
 
 #flag-image {
   width: 100%;
-  border-radius: 16px;
+  height: 100px;
+  border-radius: 16px 16px 0 0;
 }
