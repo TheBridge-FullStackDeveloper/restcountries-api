@@ -1,7 +1,7 @@
 const cardTemplate = function (/* You can pass the data here*/) {
   return `<div class="card">
-              <img id="flag-image" src="${/* Add the image link here*/}" alt="flag" />
-              <h1 class="center">${/*Add country name here*/}</h1>
+              <img id="flag-image" src="ADD THE IMAGE LINK HERE" alt="flag" />
+              <h1 class="center">ADD COUNTRY NAME HERE</h1>
             </div>`;
 };
 
