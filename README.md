@@ -1,6 +1,6 @@
 # Countries of the World 🌎
 
-In this challenge we are going to use the [restcountries API](https://restcountries.eu/)
+In this challenge we are going to use the [restcountries API](https://restcountries.com/)
 
 In this repository you'll find a `index.html`, `style.css` and a `index.js`.
 
