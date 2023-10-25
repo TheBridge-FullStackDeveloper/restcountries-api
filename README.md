@@ -20,7 +20,7 @@ En `index.js` hay una función llamada `cardTemplate(data)` que recibe un parám
 
 El resultado final debería ser algo como esto:
 
-<img width="1440" alt="Captura de pantalla 2021-05-26 a las 11 27 13" src="https://user-images.githubusercontent.com/33903092/119640675-23433900-be19-11eb-9eb7-095046759d34. png">
+![image](https://github.com/TheBridge-FullStackDeveloper/restcountries-api/assets/33903092/ce52b8be-42f0-416d-883d-9729be19f32e)
 
 ## Bonificación 🎁
 
