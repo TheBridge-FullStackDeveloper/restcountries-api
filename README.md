@@ -12,7 +12,7 @@ In `index.js` there is a function called `cardTemplate(data)` who receive one pa
 
 ## Tasks 📝
 
-1 - Implement the `fetch()` function, you'll need to pass the URL string as parameter, to retrieve all the countries. You can find the URL [here](https://restcountries.eu/#api-endpoints-all)
+1 - Implement the `fetch()` function, you'll need to pass the URL string as parameter, to retrieve all the countries. You can find in thi [URL](https://restcountries.com/#endpoints-all) 
 
 2 - Create a loop to iterate the Array which you'll receive as response from the API 
 
@@ -24,4 +24,4 @@ The final result should be something like this:
 
 ## Bonus 🎁
 
-4 - Create a filter to let the user select just countries in the same continent, for this iteration there aren't elements or part of code already done, everything is up to you 😜
+4 - Crear un filtro que permita al usuario seleccionar solo países del mismo continente, para esta iteración no hay elementos ni parte de código ya hecho, todo depende de ti 😜
