@@ -1,23 +1,29 @@
-const cardTemplate = function (/* You can pass the data here*/) {
+// URL para obtener todos los países
+const API_URL = 'https://restcountries.com/v3.1/all';
+
+const cardTemplate = function (data) {
   return `<div class="card">
-              <img id="flag-image" src="ADD THE IMAGE LINK HERE" alt="flag" />
-              <h1 class="center">ADD COUNTRY NAME HERE</h1>
+              <img id="flag-image" src="${data.flags.svg}" alt="flag of ${data.name.common}" />
+              <h1 class="center">${data.name.common}</h1>
             </div>`;
 };
 
 const countriesNode = document.getElementById("countries");
 
-fetch(/* Need the provide API URL to get all countries */)
-  .then(function (response) {
-    // fetch() returns a promise containing the response (a Response object).
-    // This is just an HTTP response, not the actual JSON. 
-    // To extract the JSON body content from the response, 
-    // we use the json() method and pass it into the next .then()
-  })
-  .then(function (countries) {
-    // Here is where you'll need to add into the DOM all the countries received from API 
+fetch(API_URL)
+  .then(response => response.json())
+  .then(countries => {
+    console.log(countries[0]); // Esto imprimirá el primer país de la lista
 
-    // 1 - We will need to iterate the countries variable with a loop
-    // 2 - You can use the cardTemplate() function to create a div with a class card already styled
-    // 💡 you can use countriesNode variable to add elements
+    countries.forEach(country => {
+      const countryCard = cardTemplate(country);
+      countriesNode.innerHTML += countryCard;
+    });
+})
+
+ 
+  .catch(error => {
+    console.error("Error fetching countries:", error);
   });
+
+  
