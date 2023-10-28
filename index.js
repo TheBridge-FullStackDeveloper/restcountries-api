@@ -3,8 +3,10 @@ const cardTemplate = function (country) {
     <div class="card">
       <img id="flag-image" src="${country.flags.png}" alt="flag" />
       <h1 class="center">${country.name.common}</h1>
+      <p>Continente: ${country.region}</p>
     </div>`;
 };
+
 
 const countriesNode = document.getElementById("countries");
 

@@ -25,3 +25,9 @@ body {
   height: 100px;
   border-radius: 16px 16px 0 0;
 }
+
+label {
+  display: block;
+  flex-direction: row;
+  text-align: left;
+}
