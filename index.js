@@ -1,8 +1,7 @@
-const cardTemplate = function (URL, name, region) {
+const cardTemplate = function (URL, name) {
   return `<div class="card">
               <img id="flag-image" src="${URL}" alt="flag" />
               <h1 class="center">${name}</h1>
-              <h4 class="center">${region}</h4>
             </div>`;
 };
 
@@ -20,7 +19,7 @@ fetch("https://restcountries.com/v3.1/all")
 
       let filteredCountries;
 
-      if (selectedRegion !== "all") {
+      if (selectedRegion !== "All") {
         filteredCountries = countries.filter(
           (country) => country.region === selectedRegion
         );
@@ -28,15 +27,12 @@ fetch("https://restcountries.com/v3.1/all")
         filteredCountries = countries;
       }
 
-      // Clear the countriesNode before adding filtered countries.
       countriesNode.innerHTML = "";
 
-      // Add filtered countries to the DOM.
       filteredCountries.forEach((country) => {
         countriesNode.innerHTML += cardTemplate(
           country.flags.png,
-          country.name.common,
-          country.region
+          country.name.common
         );
       });
     });
