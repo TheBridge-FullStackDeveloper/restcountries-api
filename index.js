@@ -1,23 +1,31 @@
-const cardTemplate = function (/* You can pass the data here*/) {
+const cardTemplate = function (country) {
   return `<div class="card">
-              <img id="flag-image" src="ADD THE IMAGE LINK HERE" alt="flag" />
-              <h1 class="center">ADD COUNTRY NAME HERE</h1>
+              <img id="flag-image" src=${country.flags.png} alt="${country.name.common} flag" />
+              <h1 class="center">${country.name.common}</h1>
             </div>`;
 };
 
 const countriesNode = document.getElementById("countries");
+const continentSelector = document.getElementById("continentSelector");
 
-fetch(/* Need the provide API URL to get all countries */)
-  .then(function (response) {
-    // fetch() returns a promise containing the response (a Response object).
-    // This is just an HTTP response, not the actual JSON. 
-    // To extract the JSON body content from the response, 
-    // we use the json() method and pass it into the next .then()
-  })
-  .then(function (countries) {
-    // Here is where you'll need to add into the DOM all the countries received from API 
+const showCountriesByContinent = (continent) => {
+  fetch('https://restcountries.com/v3.1/all')
+    .then(function (response) {
+      return response.json()
+    })
+    .then(function (countries) {
+      const filteredCountries = continent === "All" ? countries : countries.filter((country) => country.region === continent);
+      countriesNode.innerHTML = '';
+      filteredCountries.forEach((country) => {
+        const card = cardTemplate(country);
+        countriesNode.innerHTML += card;
+      });
+    });
+};
 
-    // 1 - We will need to iterate the countries variable with a loop
-    // 2 - You can use the cardTemplate() function to create a div with a class card already styled
-    // 💡 you can use countriesNode variable to add elements
-  });
+continentSelector.addEventListener('change', function () {
+  const selectedContinent = continentSelector.value;
+  showCountriesByContinent(selectedContinent);
+});
+
+showCountriesByContinent("All");
