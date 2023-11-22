@@ -1,4 +1,6 @@
-# Paises del Mundo 🌎
+![logotipo de The Bridge](https://user-images.githubusercontent.com/27650532/77754601-e8365180-702b-11ea-8bed-5bc14a43f869.png "logotipo de The Bridge")
+
+# 🚀 The bridge - 🌎 Paises del Mundo
 
 En este desafío vamos a utilizar la [API de restcountries](https://restcountries.com/)
 
@@ -22,6 +24,6 @@ El resultado final debería ser algo como esto:
 
 ![image](https://github.com/TheBridge-FullStackDeveloper/restcountries-api/assets/33903092/ce52b8be-42f0-416d-883d-9729be19f32e)
 
-## Bonificación 🎁
+## Bonus 🎁
 
 4 - Crear un filtro que permita al usuario seleccionar solo países del mismo continente, para esta iteración no hay elementos ni parte de código ya hecho, todo depende de ti 😜
